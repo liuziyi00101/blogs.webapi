@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AspectCore.Extensions.DependencyInjection" Version="2.2.0"/>
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0"/>
+    <PackageReference Include="AutoMapper" Version="10.1.1"/>
+    <PackageReference Include="CSRedisCore" Version="3.6.6"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0"/>
+    <PackageReference Include="NETCore.Encrypt" Version="2.0.9"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZswBlog.DTO\ZswBlog.DTO.csproj"/>
+    <ProjectReference Include="..\ZswBlog.Entity\ZswBlog.Entity.csproj"/>
+    <ProjectReference Include="..\ZswBlog.Query\ZswBlog.Query.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Expression.cs"/>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZswBlog.Core</name>
+    </assembly>
+    <members>
+        <member name="T:ZswBlog.Core.Controllers.ApiResultFilter">
+            <summary>
+            API接口返回类型
+            </summary>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.AnnouncementController">
+            <summary>
+            通知公告
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.AnnouncementController.GetAnnouncementsOnTop">
+            <summary>
+            获取指定置顶的通知公告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.AnnouncementController.GetPushAnnouncements">
+            <summary>
+            获取正在推送的通知公告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.AnnouncementController.GetAllAnnouncements">
+            <summary>
+            获取所有的通知公告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.ArticleController">
+            <summary>
+            文章控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleById(System.Int32)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id">文章Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleListByPage(System.Int32,System.Int32)">
+            <summary>
+            分页获取文章列表
+            </summary>
+            <param name="limit"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.AddArticleLike(System.Int32)">
+            <summary>
+            文章添加喜爱数
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleListByLikes">
+            <summary>
+            根据喜好获取文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleListByVisit">
+            <summary>
+            根据浏览数获取文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleListByFuzzyTitle(System.String)">
+            <summary>
+            模糊查询获取文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.ArticleController.GetArticleListByCategory(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据文章类型分页获取文章列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.AuthorizeController">
+            <summary>
+            Token分发
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.AuthorizeController.GetToken(ZswBlog.Query.UserVerifyQuery)">
+            <summary>
+             获取 token
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.CategoryController">
+            <summary>
+            文章分类控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CategoryController.GetCategoryById(System.Int32)">
+            <summary>
+            根据类型Id获取类型详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CategoryController.GetAllCategory">
+            <summary>
+            获取所有文章类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.CommentController">
+            <summary>
+            评论控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommentController.#ctor(ZswBlog.IServices.ICommentService,ZswBlog.ThirdParty.Email.EmailHelper)">
+            <summary>
+            
+            </summary>
+            <param name="commentService"></param>
+            <param name="emailHelper"></param>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommentController.GetCommentTreeListByPage(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页获取文章评论列表
+            </summary>
+            <param name="limit"></param>
+            <param name="pageIndex"></param>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommentController.SaveMessage(ZswBlog.Entity.CommentEntity)">
+            <summary>
+            添加评论
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.CommonController">
+            <summary>
+            通用控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommonController.GetMusicList">
+            <summary>
+            获取歌曲列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommonController.GetAllMusicList">
+            <summary>
+            获取所有歌曲列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.CommonController.GetInitData">
+            <summary>
+            获取初始化页面数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.FileAttachmentController">
+            <summary>
+            附件控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.FileAttachmentController.UploadImageList(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile},System.Int32)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="files"></param>
+            <param name="operatorId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.FileAttachmentController.DeleteImageList(System.String[])">
+            <summary>
+            删除图片列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.FriendLinkController.GetFriendLinks">
+            <summary>
+            获取所有友情链接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.FriendLinkController.SaveFriendLink(ZswBlog.Entity.FriendLinkEntity)">
+            <summary>
+            申请友情链接
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Controllers.MessageController">
+            <summary>
+            留言控制器
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.MessageController.GetMessageTreeListByPage(System.Int32,System.Int32)">
+            <summary>
+            分页获取留言列表
+            </summary>
+            <param name="limit"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.MessageController.GetMessageListByCount(System.Int32)">
+            <summary>
+            获取留言列表
+            </summary>
+            <param name="count">获取数</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.MessageController.SaveMessage(ZswBlog.Entity.MessageEntity)">
+            <summary>
+            添加留言
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.SiteTagController.GetAllSiteTagAsync">
+            <summary>
+            获取所有站点标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.SiteTagController.SaveSiteTag(ZswBlog.Entity.SiteTagEntity)">
+            <summary>
+            添加站点标签
+            </summary>
+            <param name="prama"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.TimeLineController.GetAllTimeLineAsync">
+            <summary>
+            获取所有时间线文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.TravelController.GetTravelsByPage(System.Int32,System.Int32)">
+            <summary>
+            分页获取旅行信息
+            </summary>
+            <param name="limit"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.UserController.GetUserOnNearLogin">
+            <summary>
+            获取最近登录用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.UserController.SaveEmail(ZswBlog.Entity.UserEntity)">
+            <summary>
+            保存邮箱
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.UserController.QQLoginByAccessToken(System.String,System.String)">
+            <summary>
+            获取QQ登录用户信息
+            </summary>
+            <param name="accessToken"></param>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Core.Controllers.UserController.GetUserInfoByAccessToken">
+            <summary>
+            根据Token获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.config.BaseResponseMiddlerware">
+            <summary>
+            错误反馈中间件
+            </summary>
+        </member>
+        <member name="T:ZswBlog.Core.config.ConfigureAutofac">
+            <summary>
+            AutoFacIOC配置类
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.config.ConfigureAutofac.Load(Autofac.ContainerBuilder)">
+            <summary>
+            控制反转
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:ZswBlog.Core.Program">
+            <summary>
+            项目启动类
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Program.Main(System.String[])">
+            <summary>
+            主启动入口方法
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ZswBlog.Core.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            设置初始化
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZswBlog.Core.Startup">
+            <summary>
+            项目启动类
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            初始化Configuration文件
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:ZswBlog.Core.Startup.Configuration">
+            <summary>
+            配置访问属性
+            </summary>
+        </member>
+        <member name="F:ZswBlog.Core.Startup._logFactory">
+            <summary>
+            日志工厂
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Core.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            中间件服务注册
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ZswBlog.Core.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            设置配置
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:ZswBlog.Core.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="containerBuilder"></param>
+        </member>
+        <member name="T:ZswBlog.Web.Controllers.TagController">
+            <summary>
+            标签页
+            </summary>
+        </member>
+        <member name="M:ZswBlog.Web.Controllers.TagController.#ctor(ZswBlog.IServices.IArticleTagService,ZswBlog.IServices.ITagService)">
+            <summary>
+            
+            </summary>
+            <param name="articleTagService"></param>
+            <param name="tagService"></param>
+        </member>
+        <member name="M:ZswBlog.Web.Controllers.TagController.GetTagList">
+            <summary>
+            获取所有的文章标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZswBlog.Web.Controllers.TagController.GetArticleListByPageAndTagId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取根据Id单个标签下的文章
+            </summary>
+            <param name="limit"></param>
+            <param name="pageIndex"></param>
+            <param name="tagId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

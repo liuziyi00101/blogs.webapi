@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  zswblog.core:
+    image: ${DOCKER_REGISTRY-}zswblogcore:latest-13
+    build:
+      context: .
+      dockerfile: ZswBlog.Core/Dockerfile
+    ports:
+        - 8004:8004
